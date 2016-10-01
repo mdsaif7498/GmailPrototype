@@ -1,0 +1,83 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 1342px;
+            height: 819603584px;
+        }
+        .auto-style3 {
+        }
+        .auto-style4 {
+            height: 86px;
+        }
+        .auto-style6 {
+            width: 48px;
+            height: 199px;
+        }
+        .auto-style7 {
+            width: 826px;
+            height: 408px;
+            background-color: #FFFFFF;
+        }
+        .auto-style8 {
+            width: 48px;
+            height: 42px;
+        }
+        .auto-style9 {
+            height: 86px;
+            width: 48px;
+        }
+        .auto-style10 {
+            padding: 0px;
+            height: 86px;
+            width: 722px;
+        }
+    </style>
+</head>
+<body style="background-color: #FFFFFF">
+    <form id="form1" runat="server">
+        <table class="auto-style1" >
+            <tr>
+                <td class="auto-style9">&nbsp;</td>
+                <td class="auto-style10">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+                <td class="auto-style4">
+                    <asp:Label ID="lblUserName" runat="server"></asp:Label>
+                    <br />
+                    <asp:LinkButton ID="lnkBtnLogout" runat="server" OnClick="lnkBtnLogout_Click">LogOut</asp:LinkButton>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style8">
+                    <asp:Button ID="btnComposeMail" runat="server" Height="37px" OnClick="btnComposeMail_Click" Text="Compose Mail" Width="146px" />
+                </td>
+                <td class="auto-style7" rowspan="2" colspan="2"> <asp:ContentPlaceHolder id="cphMaster" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </td>
+            </tr>
+            <tr>
+                <td class="auto-style6">
+                    <asp:TreeView ID="tvMenu" runat="server" DataSourceID="SiteMapDataSource1">
+                    </asp:TreeView>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style3" colspan="3">FooterInfo<br />
+                    <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
+                </td>
+            </tr>
+        </table>
+    <div>
+        </div>
+       
+    </form>
+</body>
+</html>
